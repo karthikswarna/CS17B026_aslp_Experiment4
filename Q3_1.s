@@ -1,10 +1,10 @@
 # MIPS program to swap two arrays.
-		.data
+	.data
 arr_A:	.word	2, 65, 7, 36, 14
 arr_B:	.word	65, 45, 12, 87, 36
 size:	.word	5
 
-		.text
+	.text
 
 main:
 	la $t0, arr_A
