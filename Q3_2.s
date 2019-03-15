@@ -1,9 +1,9 @@
-		.data
+	.data
 arr_A: 	.byte	'k', 'a', 'r', 't', 'h', 'i', 'k'	
 arr_B: 	.byte 	'c', 'h', 'a', 'n', 'd', 'r', 'a'
 size:	.word	7
 	
-		.text
+	.text
 
 main:
 	la $t0, arr_A
