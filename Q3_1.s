@@ -1,4 +1,4 @@
-# MIPS program to swap two arrays.
+# MIPS program to swap two integer arrays.
 	.data
 arr_A:	.word	2, 65, 7, 36, 14
 arr_B:	.word	65, 45, 12, 87, 36
