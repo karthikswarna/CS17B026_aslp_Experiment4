@@ -2,7 +2,7 @@
 
 	.data
 
-var: .word -1339636425    # it's binary equivalent is 
+var: .word -1339636425    		# it's binary equivalent is 
 
 	.text
 
@@ -15,12 +15,12 @@ main:
 	
 	
 	andi $t5, $t0, 1
-	beq $t5, $t1, lsb_0 # if LSB is 0, branch to "lsb_0".
-	addi $t2, $t2, 1	# increment to 1's sequence.
+	beq $t5, $t1, lsb_0 		# if LSB is 0, branch to "lsb_0".
+	addi $t2, $t2, 1		# increment to 1's sequence.
 	li $t1, 1
 	j for
 lsb_0:
-	addi $t3, $t3, 1	# increment to 0's sequence.
+	addi $t3, $t3, 1		# increment to 0's sequence.
 	li $t1, 0
 
 for:
