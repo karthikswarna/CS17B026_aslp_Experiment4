@@ -1,3 +1,4 @@
+# MIPS program to swap two charecter arrays.
 	.data
 arr_A: 	.byte	'k', 'a', 'r', 't', 'h', 'i', 'k'	
 arr_B: 	.byte 	'c', 'h', 'a', 'n', 'd', 'r', 'a'
