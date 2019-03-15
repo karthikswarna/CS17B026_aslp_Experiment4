@@ -1,28 +1,28 @@
 # MIPS program to multiply two 32-bit numbers without using mult operation.
-		.data
+	.data
 
-var1:	.word 32444464 		#multiplicand
-var2: 	.word 5254 			#multiplier
-prod: 	.word 0:2			#product = s0 s1.
+var1:	.word 	32444464 		#multiplicand
+var2: 	.word 	5254 			#multiplier
+prod: 	.word 	0:2			#product = s0 s1.
 	
-		.text
+	.text
 main:
 
 	la $a0, var1			# multiplicand address.
-    la $a1, var2			# multiplier address.
+    	la $a1, var2			# multiplier address.
 	la $a3, prod			# product array address.
 
 	lw $v0, 0($a0)			# Initializing the multiplicand.
 	lw $v1, 0($a1)			# Initializing the multiplier.
 
-	li $t0, 0 				# loop counter
-	li $t1, 0				# Initialize the LSB result.
-	li $t2, 0 				# Initialize the overflow.
-	li $s0, 0 				# Initialize the result registers.
+	li $t0, 0 			# loop counter
+	li $t1, 0			# Initialize the LSB result.
+	li $t2, 0 			# Initialize the overflow.
+	li $s0, 0 			# Initialize the result registers.
 	li $s1, 0
 
 Mult_loop_1:
-	beq $t0, 32, Mult_end	# Terminating condition.
+	beq $t0, 32, Mult_end		# Terminating condition.
 	andi $t1, $v1, 1
 	beq $t1, 1, Mult_add_1 
 	beq $t1, 0, Mult_shift_1
@@ -51,6 +51,6 @@ Mult_shift_1:
 Mult_end:
 	sw $s1, 4($a3)
 	sw $s0, 0($a3)
-	j $ra			# returning product from s0, s1 to .data segment.
+	j $ra				# returning product from s0, s1 to .data segment.
 
 .end main
